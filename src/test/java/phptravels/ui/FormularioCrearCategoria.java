@@ -3,7 +3,7 @@ package phptravels.ui;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class FormularioAddCategory {
+public class FormularioCrearCategoria {
 
     public static final Target NOMBRE_CATEGORIA = Target.the("Campo Nombre de Categoria").located(By.xpath("//body/div[3]/div[1]/div[3]/div[2]/div[1]/form[1]/div[2]/div[1]/div[1]/input[1]"));
 

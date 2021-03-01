@@ -6,10 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import phptravels.acciones.AgregarCategory;
-import phptravels.acciones.Decidido;
-import phptravels.acciones.IngresarCon;
-import phptravels.acciones.SeleccionarOpcion;
+import phptravels.acciones.*;
 import phptravels.preguntas.LaPaginaPrincipal;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -35,7 +32,7 @@ public class WhenUserCreatePostWhitCategorie {
     }
 
     @Test
-    public void IngresarAMyAccountCorrectamente(){
+    public void CrearCategoriaCorrectamente(){
 
         /* El actor se encuentra registrado en la paltaforma de viajes
            El actor quiere ingresar a su cuenta
@@ -97,6 +94,11 @@ public class WhenUserCreatePostWhitCategorie {
                         .estado("Disable")
                         .run()
         );
+        //El actor valida que la categoria se ha creado correctamente
+        //El actor selecciona el boton buscar
+        actor.attemptsTo(BuscarCategory.search("Science fiction"));
+
+
 
 
 

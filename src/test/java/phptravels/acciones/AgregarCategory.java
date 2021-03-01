@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
-import phptravels.ui.FormularioAddCategory;
+import phptravels.ui.FormularioCrearCategoria;
 
 public class AgregarCategory implements Task {
 
@@ -49,19 +49,19 @@ public class AgregarCategory implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                Enter.theValue(nombreCategoria).into(FormularioAddCategory.NOMBRE_CATEGORIA),
+                Enter.theValue(nombreCategoria).into(FormularioCrearCategoria.NOMBRE_CATEGORIA),
                 SelectFromOptions.byVisibleText(estado).from(By.xpath("//body/div[3]/div[1]/div[3]/div[2]/div[1]/form[1]/div[2]/div[2]/div[1]/select[1]")),
-                Enter.theValue(nombreVietnamese).into(FormularioAddCategory.NOMBRE_VIETNAMESE),
-                Enter.theValue(nombreRussian).into(FormularioAddCategory.NOMBRE_RUSSIAN),
-                Enter.theValue(nombreArabic).into(FormularioAddCategory.NOMBRE_ARABIC),
-                Enter.theValue(nombreFarsi).into(FormularioAddCategory.NOMBRE_FARSI),
-                Enter.theValue(nombreTurkish).into(FormularioAddCategory.NOMBRE_TURKISH),
-                Enter.theValue(nombreFrench).into(FormularioAddCategory.NOMBRE_FRENCH),
-                Enter.theValue(nombreSpanish).into(FormularioAddCategory.NOMBRE_SPANISH),
+                Enter.theValue(nombreVietnamese).into(FormularioCrearCategoria.NOMBRE_VIETNAMESE),
+                Enter.theValue(nombreRussian).into(FormularioCrearCategoria.NOMBRE_RUSSIAN),
+                Enter.theValue(nombreArabic).into(FormularioCrearCategoria.NOMBRE_ARABIC),
+                Enter.theValue(nombreFarsi).into(FormularioCrearCategoria.NOMBRE_FARSI),
+                Enter.theValue(nombreTurkish).into(FormularioCrearCategoria.NOMBRE_TURKISH),
+                Enter.theValue(nombreFrench).into(FormularioCrearCategoria.NOMBRE_FRENCH),
+                Enter.theValue(nombreSpanish).into(FormularioCrearCategoria.NOMBRE_SPANISH),
                 Scroll.to(By.id("ADD_BLOG_CAT")),
-                Enter.theValue(nombreSpanish).into(FormularioAddCategory.NOMBRE_SPANISH),
-                Enter.theValue(nombreGerman).into(FormularioAddCategory.NOMBRE_GERMAN),
-                Click.on(FormularioAddCategory.BOTON_ADD)
+                Enter.theValue(nombreSpanish).into(FormularioCrearCategoria.NOMBRE_SPANISH),
+                Enter.theValue(nombreGerman).into(FormularioCrearCategoria.NOMBRE_GERMAN),
+                Click.on(FormularioCrearCategoria.BOTON_ADD)
         );
 
     }

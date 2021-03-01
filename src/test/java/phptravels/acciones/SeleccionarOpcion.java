@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.Step;
-import phptravels.ui.PaginaPrincipal;
+import phptravels.ui.PaginaListarCategorias;
 
 public class SeleccionarOpcion implements Task {
     private Target menuTarget;
@@ -23,21 +23,21 @@ public class SeleccionarOpcion implements Task {
 
         menuSeleccionado = "Menu Blog";
         return Instrumented
-                .instanceOf(SeleccionarOpcion.class).withProperties(PaginaPrincipal.MENU_BLOG);
+                .instanceOf(SeleccionarOpcion.class).withProperties(PaginaListarCategorias.MENU_BLOG);
     }
 
     public static Performable blogCategories() {
 
         menuSeleccionado = "SubMenu BlogCategories";
         return Instrumented
-                .instanceOf(SeleccionarOpcion.class).withProperties(PaginaPrincipal.SUBMENU_BLOG_CATEGORIES);
+                .instanceOf(SeleccionarOpcion.class).withProperties(PaginaListarCategorias.SUBMENU_BLOG_CATEGORIES);
     }
 
     public static Performable addCategories() {
 
         menuSeleccionado = "Boton add Category";
         return Instrumented
-                .instanceOf(SeleccionarOpcion.class).withProperties(PaginaPrincipal.BOTON_ADD_CATEGORY);
+                .instanceOf(SeleccionarOpcion.class).withProperties(PaginaListarCategorias.BOTON_ADD_CATEGORY);
     }
 
 
